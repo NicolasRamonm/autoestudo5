@@ -31,6 +31,8 @@ c) Imprime os números pares de 2 a 10.
 
 d) Imprime os números ímpares de 2 a 10.
 
+A resposta certa é (A)
+
 ______
 
 **2)** Identificar a linha que falta no código para criar uma classe Veiculo com atributo marca, e uma classe Carro que herda de Veiculo com um método ligar(). 
@@ -46,6 +48,8 @@ B) let ligar = new ligar("Toyota");
 C) class Moto extends Veiculo {};
 
 D) carro1.ligar();
+
+A resposta certa é (A)
 
 ______
 
@@ -63,6 +67,8 @@ C) 14
 
 D) 12
 
+A resposta certa é (A)
+
 ______
 
 **4)** Como você criaria um método `acelerar()` em uma classe `Carro`, que recebe um parâmetro `velocidade` e o adiciona a um atributo `velocidadeAtual`?
@@ -75,6 +81,8 @@ C) ![Uma imagem](assets/ex04_3.PNG)
 
 D) ![Uma imagem](assets/ex04_4.PNG)
 
+A resposta certa é (B)
+
 ______
 
 **5)** Qual a forma correta de definir uma classe Carro em JavaScript, com um método ligar() e um atributo marca?
@@ -86,6 +94,8 @@ B) ![Uma imagem](assets/ex05_2.PNG)
 C) ![Uma imagem](assets/ex05_3.PNG)
 
 D) ![Uma imagem](assets/ex05_4.PNG)
+
+A resposta certa é (A)
 
 ______
 
@@ -103,6 +113,8 @@ C) "João Maria"
 
 D) "undefined undefined"
 
+A resposta certa é (A)
+
 ______
 
 # Questões dissertativas
@@ -119,6 +131,24 @@ Criando e manipulando Animais:
 - Para cada animal, chame o método descrever() para ver a descrição no console.
 
 Dica: Utilize `console.log()` para exibir as informações!
+
+class Animal {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+
+    }
+
+    descrever(){
+        console.log('Esse animal é o '+ this.nome +', ele tem '+this.idade+' anos.');
+    }
+}
+
+var gato = new Animal('Gato', 14);
+var cachorro = new Animal('Cachorro', 2);
+
+gato.descrever();
+cachorro.descrever();
 
 ______
 
@@ -144,6 +174,42 @@ Chamando os Métodos:
 - Para o gato, chame o método miar() para "ouvir" o som que ele faz (é também para ver o som no console).
 
 Dica: Utilize console.log() para exibir as informações!
+
+
+class Animal {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    descrever(){
+        console.log('Esse animal é o '+ this.nome +', ele tem '+this.idade+' anos.');
+    }
+}
+
+var gato = new Animal('Gato', 14);
+var cachorro = new Animal('Cachorro', 2);
+
+gato.descrever();
+cachorro.descrever();
+
+
+
+class Gato extends Animal{
+    constructor(cor, nome, idade){
+        super(nome, idade)
+        this.cor = cor
+    }
+
+    miar(){
+        console.log('Miau!',"disse o gato "+this.cor)
+    }
+}
+
+var gato2 = new Gato('marrom', 'gato2', 10);
+
+gato2.miar()
+gato2.descrever()
 
 
 ______
